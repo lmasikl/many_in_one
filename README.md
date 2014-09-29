@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/lmasikl/many_in_one.svg)](https://travis-ci.org/lmasikl/many_in_one)
