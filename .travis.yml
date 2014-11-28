@@ -4,3 +4,4 @@ python:
 - "3.4"
 # command to run tests
 script: python collect.py -v
+script: python change.py -v

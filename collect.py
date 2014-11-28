@@ -5,8 +5,9 @@ import re
 
 __author__ = 'maxim'
 __project__ = 'many_in_one'
+__version__ = '0.0.1'
 
-EXCLUDE_DIRS = ['.idea', '.git', 'migrations', 'vendor']
+EXCLUDE_DIRS = ['.idea', '.git', 'migrations', 'vendor', 'env']
 
 EXCLUDE_FILES = []
 
