@@ -1,8 +1,42 @@
 # coding=utf-8
 import subprocess
 servers = {
-    'Moscow': 'ya.ru',
-    'San-Francisco': 'google.com',
+    'Buenos': 'bn-ar.boxpnservers.com',
+    'Sydney': 'sy-au.boxpnservers.com',
+    'Montreal': 'mr-ca.boxpnservers.com',
+    'Toronto': 'tr-ca.boxpnservers.com',
+    'Vancouver': 'vn-ca.boxpnservers.com',
+    'Paris': 'pr-fr.boxpnservers.com',
+    'Frankfurt': 'ff-de.boxpnservers.com',
+    'Reykjavik': 'ry-is.boxpnservers.com',
+    'Milan': 'ml-it.boxpnservers.com',
+    'Steinsel': 'st-lx.boxpnservers.com',
+    'Amsterdam': 'am-nl.boxpnservers.com',
+    'Panama': 'pn.boxpnservers.com',
+    'Debica': 'db-pl.boxpnservers.com',
+    'Moscow': 'ms-ru.boxpnservers.com',
+    'Singapore': 'sg.boxpnservers.com',
+    'Madrid': 'mr-es.boxpnservers.com',
+    'Stockholm': 'se.boxpnservers.com',
+    'Zurich': 'zr-ch.boxpnservers.com',
+    'Istanbul': 'is-tr.boxpnservers.com',
+    'Coventry': 'cv-uk.boxpnservers.com',
+    'Hampshire': 'hs-uk.boxpnservers.com',
+    'London': 'ln-uk.boxpnservers.com',
+    'Maidenhead': 'md-uk.boxpnservers.com',
+    'Manchester': 'mh-uk.boxpnservers.com',
+    'Atlanta': 'al-us.boxpnservers.com',
+    'Chicago': 'ch-us.boxpnservers.com',
+    'Dallas': 'dl-us.boxpnservers.com',
+    'A': 'la-us.boxpnservers.com',
+    'B': 'lab-us.boxpnservers.com',
+    'Miami': 'mi-us.boxpnservers.com',
+    'York': 'ny-us.boxpnservers.com',
+    'Jersey': 'nyb-us.boxpnservers.com',
+    'Phoenix': 'ph-us.boxpnservers.com',
+    'Jose': 'sj-us.boxpnservers.com',
+    'St': 'sl-us.boxpnservers.com',
+    'Washington': 'dc-us.boxpnservers.com',
 }
 
 
@@ -64,8 +98,7 @@ def ping(website="google.com"):
 
 
 def find_best_server():
-    pings = [(city, ping(server)) for city, server in servers.items()]
-    print(sorted(pings, key=lambda p: p[1]))
+    print('\n\r'.join(['{0}\t{1}'.format(i, s) for i, s in enumerate(sorted([(city, ping(server), server)for city, server in servers.items()], key=lambda p: -1 * p[1]))]))
 
 
 find_best_server()
